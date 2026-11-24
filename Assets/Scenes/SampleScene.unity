@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 330585545}
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
+  - component: {fileID: 330585548}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -256,6 +257,24 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &330585548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e784979511f4724aa1fe1fbbecdc30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ThirdPersonCamera
+  target: {fileID: 2145008486}
+  offset: {x: 0, y: 1.6, z: 0}
+  distance: 4
+  sensitivity: 0.15
+  minPitch: -20
+  maxPitch: 60
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,6 +525,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b0b8039abf957454b9078b2e3152e30f, type: 3}
   m_PrefabInstance: {fileID: 1206701833}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1206701835 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: b0b8039abf957454b9078b2e3152e30f, type: 3}
+  m_PrefabInstance: {fileID: 1206701833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1697773489
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,6 +653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2145008486}
   - component: {fileID: 2145008487}
+  - component: {fileID: 2145008488}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -677,6 +702,25 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &2145008488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145008485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a2678a05d111fe4bb07aac244b993eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  walkSpeed: 2
+  runSpeed: 5
+  rotationSpeed: 10
+  jumpHeight: 1.2
+  gravity: -20
+  animator: {fileID: 1206701835}
+  cameraTransform: {fileID: 330585546}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
